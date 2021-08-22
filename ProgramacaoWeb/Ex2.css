@@ -1,0 +1,53 @@
+body{
+  font-family: 'Klee One', cursive;
+  font-size: 25px;
+  display: grid; 
+  grid-template-columns: 0.6fr 1.8fr 0.6fr;
+  grid-template-rows: auto 100vh auto;  
+  grid-gap: 1em; 
+  grid-template-areas: 
+    "header header header"
+    "sidebar1 content sidebar2"
+    "footer footer footer"; 
+}
+
+.header { 
+  grid-area: header; 
+  padding: 1.5rem;
+  border-radius: 10px;
+}
+.sidebar1 { 
+  grid-area: sidebar1;
+  padding: 1rem;  
+  border-radius: 10px;
+}
+.content { 
+  grid-area: content;
+  padding: 1rem;
+  border-radius: 10px;
+}
+.sidebar2 { 
+  grid-area: sidebar2;
+  padding: 1rem;
+  border-radius: 10px;
+}
+.footer { 
+  grid-area: footer;
+  padding: 1rem;
+  border-radius: 10px;
+}
+
+.header, .footer{
+  background: #999999;
+  color: #FDFDFD;
+}
+
+.sidebar1, .content{
+  background: #444444;
+  color: #FDFDFD;
+}
+
+.sidebar2{
+  background: #CCCCCC;
+  color: #FDFDFD;
+}
