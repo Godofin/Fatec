@@ -16,3 +16,23 @@ B. Apresentada a tabela pedido:
    5. Altere o contato da empresa Customer KIDPX para Durant, Paul (1 Ponto)
 4. Com base na tabela Pedido, escreva o código de uma consulta na linguagem SQL que retorne os pedidos realizados entre 01/01/2020 e 31/12/2020. (1 Pontos)
 5. Consultar as tabelas Cliente e Pedido retornando os registros relativos aos pedidos e clientes simultaneamente. (2 Pontos
+
+
+## Answers
+
+
+1. Resposta 1: Criação da tabela
+create table cliente (
+id_cliente smallint primary key,
+razao_social varchar(300),
+contato varchar(300), 
+cargo varchar(300),
+documento varchar(300), 
+enderco varchar(300),
+cidade varchar(300),
+regiao char(2), 
+cep int, 
+pais varchar(300),
+telefone long
+);
+Popular tabela:
