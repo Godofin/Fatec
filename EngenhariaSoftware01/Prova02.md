@@ -16,4 +16,19 @@
 
 1. Esquemático do banco de dados a realizar;
 2. Sistema de upload;
+3. Crud de cadastro;
+
+
+## Regras de negócio
+
+1.  A  disponibilidade do professor precisa ser pelo menos 50% superior ao total de horas-aulas a ministrar no turno
+2.  Deverá ser respeitado o interstício de 11 horas entre a jornada da noite e da manhã.
+3.  O professor poderá trabalhar no máximo 8 horas por dia.
+4.  Deverá ser respeitada 1 hora de intervalo entre os turnos.
+5.  Será considerada a disponibilidade total caso o docente não entregue sua disponibilidade até a data informada.
+
+## Telas a realizar
+1. Tela de preenchimento de disponibilidade;
+2. Tela de planejamento de aula;
+3. Tela de upload para o siga; 
 
