@@ -49,3 +49,20 @@ values(10249, 21, 6, '2006-07-05', '2006-08-16', '2006-08-17' ,1, 11.61, 'Ship t
 	  (10251, 32, 3, '2006-07-08', '2006-08-05', '2006-08-06' ,1, 41.34, 'Ship to 84-A', '3456, rue du Commerce Boulevard Tirou, 9012'),
 	  (10252, 61, 4, '2006-07-09', '2006-08-06', '2006-08-07' ,2, 51.30, 'Ship to 76-B', 'Boulevard Tirou, 9012'),
 	  (10253, 31, 3, '2006-07-10', '2006-07-24', '2006-07-25' ,2, 58.17, 'Destination JPAIY', 'Rua do Paço. 8901');
+
+/*1 Retorne todos Clientes do estado de São Paulo*/
+
+select * from cliente where regiao = 'SP';
+
+/*2*/
+select razao_social, regiao from cliente where pais = 'brazil';
+
+/*3*/
+select * from cliente where pais = 'Brazil' and cargo like '%manager%';
+
+/*4*/
+select count(cidade) as conta_cidade from cliente group by cidade;
+
+/*5*/
+select * from cliente where razao_social like'%KIDPX' 
+update cliente set contato = 'Durant, Paul' where id_cliente = 21;
