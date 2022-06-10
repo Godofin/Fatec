@@ -4,21 +4,21 @@ use provabd2;
 
 /*Exercicio 01*/
 
-create table cliente (
+create table cliente(
 id_cliente smallint primary key not null,
 razao_social varchar(300) not null,
-contato varchar(300) not null, 
+contato varchar(300) not null,
 cargo varchar(300) not null,
-documento varchar(300) not null, 
-enderco varchar(300) not null,
+documento bigint not null, 
+endereco varchar(300) not null,
 cidade varchar(300) not null,
-regiao char(2) not null, 
+regiao char(2) not null,
 cep int not null, 
-pais varchar(300) not null,
-telefone long not null
+pais varchar(300) not null, 
+telefone bigint not null
 );
 
-insert into cliente(id_cliente, razao_social, contato, cargo, documento, enderco, cidade, regiao, cep, pais, telefone)  
+insert into cliente(id_cliente, razao_social, contato, cargo, documento, endereco, cidade, regiao, cep, pais, telefone)  
 values
 (15, 'Costumer JUWXK', 'Richard, Shawn', 'Sales Representative', '39976521', 'Av. Dos lusíadas, 6789', 'São Paulo', 'SP', 10087,'Brazil', 1140028922),
 (21, 'Costumer KIDPX', 'Russo, Giuseppe', 'Marketing assistant', '12897504', 'Rua orós, 3456', 'São Paulo', 'SP', 124781,'Brazil', 132113158131),
@@ -26,7 +26,6 @@ values
 (34, 'Costumer IBVRG', 'Cohen Shy', 'Acounting manager', '96988926', 'Rua do paço, 1234', 'Rio de Janeiro', 'RJ', 16932,'Brazil', 11321515),
 (61, 'Costumer WULWD', 'Roncyzk, Kryzstofk', 'Acounting manager', '72017441', 'Rua da panificadora, 1234', 'Rio de Janeiro', 'RJ', 14824,'Brazil', 12321442),
 (32, 'Costumer WFIZJ', 'Misiec, Anna', 'Marketing assisten', '44494182', 'Alameda dos canários, 1234', 'São Paulo', 'SP', 81138,'Brazil', 12132481631);
-
 /*Exercicio 02*/
 
 create table pedido (
@@ -37,7 +36,7 @@ data_pedido date not null,
 data_requisicao date not null, 
 data_envio date not null, 
 id_remetente smallint not null,
-frete double not null, 
+frete bigint not null, 
 shipname varchar(300) not null,
 shipadress varchar(300) not null,
 constraint fk_idCliente foreign key(id_cliente) references cliente(id_cliente)
